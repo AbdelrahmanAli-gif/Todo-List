@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+</head>
+<body class="dark-theme">
+
+  <img src="./images/bg-desktop-dark.jpg" alt="Background Image" class="background-img">
+  <div class="content-container">
+    <nav class="navbar-container">
+      <ul class="navbar-list">
+        <li class="title">Todo</li>
+        <button class="mode-btn">
+          <img src="./images/icon-sun.svg" alt="Mode Image" class="mode-img">
+        </button>
+      </ul>
+    </nav>
+
+    <form action="" class="todo-form" autocomplete="off">
+      <label for="checkbox" class="checkbox-container">
+        <input type="checkbox" disabled class="disabled-todo-form-checkbox" id="checkbox">
+        <span class="disabled-checkmark"></span>
+      </label>
+      <input type="text" class="todo-form-input" placeholder="Create a new todo.." name="task" onfocus="placeholder = 'Currently typing..'" onfocusout="placeholder = 'Create a new todo..'">
+    </form>
+
+    <ul class="todo-list">
+    </ul>
+
+    <div class="todo-count">
+      <span class="todo-item-count"></span>
+      <div class="filter-section">
+        <button class="active filter all-filter">All</button>
+        <button class="filter active-filter">Active</button> 
+        <button class="filter completed-filter">Completed</button>
+      </div>
+      <button class="clear-completed-btn">Clear Completed</button>
+    </div>
+
+    <p class="last-section">Drag and drop to reorder list</p>
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
