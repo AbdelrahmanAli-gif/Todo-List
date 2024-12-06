@@ -71,11 +71,16 @@ const handleEvents = () => {
     deleteBtns.forEach((deleteBtn) => deleteBtn.addEventListener('click', deleteTodo));
     checkMarks.forEach((checkMark) => checkMark.addEventListener('click', updateItem));
     todoTasks.forEach((todoTask) => todoTask.addEventListener('input', resizeInput));
+    todoTasks.forEach((todoTask) => todoTask.addEventListener('change', updateText));
+}
+
+const updateText = (e) => {
+    const parentId = e.target.closest('.todo-item').id;
+    itemIndex = getIndex(parentId);
+    todoClonedItems[itemIndex].text = e.target.value;
 }
 
 const resizeInput = (e) => {
-    console.log(e.target.value);
-    console.log(e.target.value.length);
     e.target.setAttribute('size', e.target.value.length + 2);
 }
 
