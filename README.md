@@ -35,8 +35,8 @@ Technologies Used
 3. Vanilla JavaScript: For functionality and interactivity.
 
 ### Known Issues
-Drag-and-Drop Limitations: Drag-and-drop may not work as expected in some browsers.
-Mobile Design: The layout may need further refinement for smaller devices.
+- Drag-and-Drop Limitations: Drag-and-drop may not work as expected in some browsers.
+- Mobile Design: The layout may need further refinement for smaller devices.
 
 ### Chanllenge Link
 https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW
