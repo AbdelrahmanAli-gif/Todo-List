@@ -34,6 +34,9 @@ Technologies Used
 2. CSS3: Styling and responsive design.
 3. Vanilla JavaScript: For functionality and interactivity.
 
+## Preview
+Live Demo https://abdelrahmanali-gif.github.io/Todo-List/
+
 ### Known Issues
 - Drag-and-Drop Limitations: Drag-and-drop may not work as expected in some browsers.
 - Mobile Design: The layout may need further refinement for smaller devices.
