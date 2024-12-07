@@ -259,18 +259,12 @@ let afterElement = null;
 let afterElementIndex = null;
 
 const reorderTodoClonedList = () => {
-    temp = todoClonedItems[draggedItemIndex];
-    if (draggedItemIndex > afterElementIndex) {
-        for (i = draggedItemIndex; i > afterElementIndex; i--) {
-            todoClonedItems[i] = todoClonedItems[i - 1];
-        }
-        todoClonedItems[afterElementIndex] = temp;
+    todoClonedItems.splice(afterElementIndex, 0, todoClonedItems[draggedItemIndex]);
+    if (draggedItemIndex < afterElementIndex){
+        todoClonedItems.splice(draggedItemIndex, 1);
     }
     else {
-        for (i = draggedItemIndex; i < afterElementIndex; i++) {
-            todoClonedItems[i] = todoClonedItems[i + 1];
-        }
-        todoClonedItems[afterElementIndex] = temp;
+        todoClonedItems.splice(draggedItemIndex + 1, 1);
     }
 }
 
@@ -288,7 +282,6 @@ const onDragEnd = (e) => {
     draggedItem = null;
     draggedItemIndex = null;
     afterElement = null;
-    console.log(todoClonedItems);
 }
 
 const onDragOver = (e) => {
